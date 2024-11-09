@@ -40,7 +40,7 @@ static void WordCountHandler(FileInfo? file, bool lineCount, bool wordCount, boo
     }
 
     StringBuilder stringBuilder = new();
-    FileStatsData fileStatsData = StreamStatistics.GetStats(file.OpenRead());
+    FileStatsData fileStatsData = ByteStreamStatistics.GetStats(file.OpenRead());
     if (lineCount)
     {
         stringBuilder.Append($"{fileStatsData.LineCount} ");
